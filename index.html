@@ -28,7 +28,11 @@
 <body>
   <main>
     <section class="section-1">
-      <img src="images/bg-main-mobile.png" alt="bg-main-mobile" class="bg-mobile"> 
+      <picture>
+        <source srcset="images/bg-main-desktop.png" class="bg-desktop" media="(min-width: 600px">
+        <img src="images/bg-main-mobile.png" alt="bg-main-mobile" class="bg-mobile">
+      </picture>
+       
       <div class="card-back">
        <!-- <img src="images/bg-card-back.png" alt="bg-card-back" class="card-back">  -->
         <p>000</p>
@@ -50,22 +54,31 @@
     </section>
 
     <section class="section-2">
-      <form>
-        <label for="name">CARDHOLDER NAME</label><br>
-        <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed"><br>
-        <label for="cardNumber">CARD NUMBER</label><br>
-        <input type="number" id="number" name="number" placeholder="e.g. 1234 5678 9123 000"><br>
+      <form id="form">
         <div>
-          <div form-exp>
+          <label for="name">CARDHOLDER NAME</label><br>
+          <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed"><br>
+          <span>Error message expected</span><br>
+        </div>
+        <div>
+          <label for="cardNumber">CARD NUMBER</label><br>
+          <input id="number" name="number" placeholder="e.g. 1234 5678 9123 000"><br>
+          <span>Error message expected</span><br>
+        </div>
+        <div class="exp-block">
+          <div class="form-exp">
             <label for="exp-date">EXP. DATE (MM/YY)</label><br>
-            <input type="number" id="exp-date" name="expiry-date" placeholder="MM">
+            <input type="number" id="exp-month" name="expiry-date" placeholder="MM">
+            <input type="number" id="exp-year" name="expiry-date" placeholder="YY">
+            <span>Error message expected</span><br>
           </div>
           <div class="form-cvc">
             <label for="cvc">CVC</label><br>
             <input type="number" id="cvc" name="cvc" placeholder="e.g. 123">
+            <span>Error message expected</span><br>
           </div>
         </div>
-        <input type="submit" value="Confirm">
+        <input type="submit" value="Confirm" id="submit-btn">
       </form>
     </section>
   </main>
@@ -74,6 +87,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="index.js"></script>
 </body>
 
 </html>

@@ -5,34 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet"> 
     <title>Submitted</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <section class="section-1">
-    <img src="images/bg-main-mobile.png" alt="bg-main-mobile">
-    <img src="images/bg-card-back.png" alt="bg-card-back">
-    <img src="images/bg-card-front.png" alt="bg-card-front">
-    <div>
-      <div class="circles">
-        <div class="white-circle"></div>
-        <div class="transparent-circle"></div>
+  <main>
+    <section class="section-1">
+      <picture>
+        <source srcset="images/bg-main-desktop.png" class="bg-desktop" media="(min-width: 600px">
+        <img src="images/bg-main-mobile.png" alt="bg-main-mobile" class="bg-mobile">
+      </picture>
+      <div class="card-back">
+       <!-- <img src="images/bg-card-back.png" alt="bg-card-back" class="card-back">  -->
+        <p>000</p>
       </div>
-      <p class="card-num" id="card-number">0000 0000 0000 0000</p>
-      <div class="card-details">
-        <p id="card-name">JANE APPLESEED</p>
-        <p id="expiry-date">00/00</p>
+      <div class="card-front">
+        <!-- <img src="images/bg-card-front.png" alt="bg-card-front"> -->
+        <div class="card-front-info">
+          <div class="circles">
+            <div class="white-circle"></div>
+            <div class="transparent-circle"></div>
+          </div>
+          <p class="card-num" id="card-number">0000 0000 0000 0000</p>
+          <div class="card-details">
+            <p id="card-name">JANE APPLESEED</p>
+            <p id="expiry-date">00/00</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
  
-  <section class="section-3">
-    <img src="images/icon-complete.svg" alt="complete">
-    <h2>THANK YOU!</h2>
-    <p>We've added your card details</p>
-    <button>Continue</button>
-  </section>
+    <section class="section-3">
+      <img src="images/icon-complete.svg" alt="complete">
+      <h2>THANK YOU!</h2>
+      <p>We've added your card details</p>
+      <button>Continue</button>
+    </section>
+  </main>
 </body>
 
 </html>
